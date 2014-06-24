@@ -1,0 +1,82 @@
+.opacity (@value: 0.5) {
+  opacity: @value;
+  zoom: 1;
+}
+
+.box-sizing(@value: border-box) {
+  -webkit-box-sizing: @value;
+  -moz-box-sizing: @value;
+  box-sizing: @value;
+}
+
+.box-shadow(@horizontal, @vertical, @blur, @spread, @color) {
+  -moz-box-shadow: @horizontal + px @vertical + px @blur + px @spread + px @color;
+  -webkit-box-shadow: @horizontal + px @vertical + px @blur + px @spread + px @color;
+  box-shadow: @horizontal + px @vertical + px @blur + px @spread + px @color;
+}
+
+.border-radius(@radius: 5px){
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.gradient-top (@from, @to) {
+  background-image: linear-gradient(top, @from, @to);
+  background-image: -webkit-gradient(linear, left top, left top, @from, @to);
+  background-image: -webkit-linear-gradient(top, @from, @to);
+  background-image: -o-linear-gradient(top, @from, @to);
+  background-image: -moz-linear-gradient(top, @from, @to);
+  background-image: -ms-linear-gradient(top, @from, @to);
+}
+
+.simple-transition (@property, @duration, @trans-type: ease-in-out) {
+   -webkit-transition: @property @duration @trans-type;
+   -moz-transition: @property @duration @trans-type;
+   -o-transition: @property @duration @trans-type;
+   transition: @property @duration @trans-type;
+}
+
+.double-transition (@property1, @duration1, @property2, @duration2, @trans-type: ease-in-out) {
+   -webkit-transition: @property1 @duration1 @trans-type, @property2 @duration2 @trans-type;
+   -moz-transition: @property1 @duration1 @trans-type, @property2 @duration2 @trans-type;
+   -o-transition: @property1 @duration1 @trans-type, @property2 @duration2 @trans-type;
+   transition: @property1 @duration1 @trans-type, @property2 @duration2 @trans-type;
+}
+
+.triple-transition (@property1, @duration1, @property2, @duration2, @property3, @duration3, @trans-type: ease-in-out) {
+   -webkit-transition: @property1 @duration1 @trans-type, @property2 @duration2 @trans-type, @property3 @duration3 @trans-type;
+   -moz-transition: @property1 @duration1 @trans-type, @property2 @duration2 @trans-type, @property3 @duration3 @trans-type;
+   -o-transition: @property1 @duration1 @trans-type, @property2 @duration2 @trans-type, @property3 @duration3 @trans-type;
+   transition: @property1 @duration1 @trans-type, @property2 @duration2 @trans-type, @property3 @duration3 @trans-type;
+}
+
+.simple-translate3d (@x: 0, @y: 0, @z: 0) {
+  -webkit-transform: translate3d(@x, @y, @z);
+  -moz-transform: translate3d(@x, @y, @z);
+  -ms-transform: translate3d(@x, @y, @z);
+  -o-transform: translate3d(@x, @y, @z);
+  transform: translate3d(@x, @y, @z);
+}
+
+.transform-style (@style) {
+  -webkit-transform-style: @style;
+  -moz-transform-style: @style;
+  -ms-transform-style: @style;
+  transform-style: @style;
+}
+
+.transform (@transformation) {
+  -webkit-transform: @transformation;
+  -moz-transform: @transformation;
+  -ms-transform: @transformation;
+  -o-transform: @transformation;
+  transform: @transformation;
+}
+
+.animation (@animation, @interval, @loop: infinite, @style: linear) {
+   -webkit-animation: @animation @interval @loop @style;
+   -moz-animation: @animation @interval @loop @style;
+   -o-animation: @animation @interval @loop @style;
+   animation: @animation @interval @loop @style;
+}
